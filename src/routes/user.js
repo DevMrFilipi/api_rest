@@ -4,7 +4,7 @@ import userController from "../controllers/UserController"
 import LoginRequired from "../middlewares/LoginRequired";
 const router = new Router;
 
-// router.get('/', userController.index);
+router.get('/', userController.index);
 router.get('/:id', userController.show);
 
 router.post('/', LoginRequired, userController.store);
